@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamza SEO — Backlink Building</title>
+<meta name="description" content="Professional link-building for website owners, SEO professionals, agencies and businesses. Homepage, guest post, niche and country-specific backlinks across 15+ countries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0c1118;
+    --bg-raised: #121924;
+    --line: #22303f;
+    --ink: #e9edf1;
+    --ink-dim: #8fa1b3;
+    --link: #59d3c4;
+    --link-dim: #2f5f5b;
+    --amber: #f0a35c;
+    --radius: 3px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3, .display{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+
+  a{color:inherit;}
+
+  .wrap{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- Nav ---------- */
+  header.top{
+    border-bottom:1px solid var(--line);
+    padding:22px 0;
+  }
+  header.top .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .brand{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:1.05rem;
+  }
+  .brand span{color:var(--link);}
+  .top nav a{
+    color:var(--ink-dim);
+    text-decoration:none;
+    font-size:0.92rem;
+    margin-left:26px;
+    transition:color .15s ease;
+  }
+  .top nav a:hover{color:var(--ink);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:88px 0 72px;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero .wrap{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:40px;
+    align-items:center;
+  }
+  #network{
+    position:absolute;
+    top:0; right:-6%;
+    width:56%;
+    height:100%;
+    z-index:1;
+    opacity:0.9;
+  }
+  .kicker{
+    color:var(--link);
+    font-size:0.88rem;
+    font-weight:500;
+    margin-bottom:18px;
+  }
+  h1.headline{
+    font-size:2.6rem;
+    line-height:1.12;
+    margin-bottom:22px;
+    max-width:11ch;
+  }
+  .hero p.lede{
+    color:var(--ink-dim);
+    font-size:1.05rem;
+    max-width:46ch;
+    margin-bottom:30px;
+  }
+  .cta-row{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:13px 22px;
+    border-radius:var(--radius);
+    font-size:0.95rem;
+    font-weight:600;
+    text-decoration:none;
+    transition:transform .15s ease, background .15s ease;
+    border:1px solid transparent;
+  }
+  .btn-primary{
+    background:var(--amber);
+    color:#1a1206;
+  }
+  .btn-primary:hover{transform:translateY(-1px);}
+  .btn-ghost{
+    border-color:var(--line);
+    color:var(--ink);
+  }
+  .btn-ghost:hover{border-color:var(--link-dim); background:rgba(89,211,196,0.06);}
+
+  /* ---------- Section shared ---------- */
+  section{
+    padding:64px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    margin-bottom:34px;
+    gap:20px;
+  }
+  .section-head h2{
+    font-size:1.5rem;
+  }
+  .section-head .num{
+    color:var(--ink-dim);
+    font-size:0.85rem;
+    font-family:'Space Grotesk', sans-serif;
+    white-space:nowrap;
+  }
+
+  /* ---------- Services list ---------- */
+  .service-list{
+    list-style:none;
+  }
+  .service-list li{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:24px;
+    padding:20px 0;
+    border-top:1px solid var(--line);
+  }
+  .service-list li:last-child{border-bottom:1px solid var(--line);}
+  .service-list h3{
+    font-size:1.05rem;
+    font-weight:600;
+  }
+  .service-list p{
+    color:var(--ink-dim);
+    font-size:0.95rem;
+    max-width:56ch;
+  }
+
+  /* ---------- Coverage ---------- */
+  .coverage-intro{
+    color:var(--ink-dim);
+    max-width:56ch;
+    margin-bottom:28px;
+  }
+  .flags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 14px;
+  }
+  .flags span{
+    font-size:0.92rem;
+    color:var(--ink);
+    padding:8px 4px;
+    border-bottom:1px solid var(--line);
+  }
+
+  /* ---------- Why ---------- */
+  .why-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px 40px;
+  }
+  .why-grid div{
+    padding:16px 0 16px 22px;
+    border-left:2px solid var(--link-dim);
+    font-size:0.96rem;
+    color:var(--ink);
+  }
+
+  /* ---------- How it works ---------- */
+  .steps{
+    counter-reset:step;
+    list-style:none;
+    display:grid;
+    gap:0;
+  }
+  .steps li{
+    counter-increment:step;
+    display:grid;
+    grid-template-columns:36px 1fr;
+    gap:18px;
+    padding:18px 0;
+    border-top:1px solid var(--line);
+  }
+  .steps li:last-child{border-bottom:1px solid var(--line);}
+  .steps li::before{
+    content:counter(step);
+    font-family:'Space Grotesk', sans-serif;
+    color:var(--link);
+    font-size:0.95rem;
+  }
+  .steps p{color:var(--ink-dim); font-size:0.95rem;}
+  .steps strong{color:var(--ink); font-weight:600;}
+
+  /* ---------- Contact ---------- */
+  .contact{
+    border-bottom:none;
+  }
+  .contact-box{
+    background:var(--bg-raised);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:44px;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:34px;
+    align-items:center;
+  }
+  .contact-box h2{
+    font-size:1.5rem;
+    margin-bottom:12px;
+  }
+  .contact-box p{
+    color:var(--ink-dim);
+    max-width:44ch;
+  }
+  .contact-links{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .contact-links a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    font-size:0.98rem;
+    padding:14px 16px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .contact-links a:hover{
+    border-color:var(--link-dim);
+    background:rgba(89,211,196,0.06);
+  }
+  .contact-links .icon{
+    color:var(--link);
+    flex-shrink:0;
+  }
+  .contact-links .label{
+    color:var(--ink-dim);
+    font-size:0.78rem;
+    display:block;
+  }
+
+  footer{
+    padding:28px 0 40px;
+    color:var(--ink-dim);
+    font-size:0.85rem;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--link);
+    outline-offset:2px;
+  }
+
+  @media (max-width: 760px){
+    .hero .wrap{grid-template-columns:1fr;}
+    #network{position:relative; width:100%; height:200px; right:0; margin-top:20px; order:2;}
+    h1.headline{font-size:2.1rem; max-width:none;}
+    .service-list li{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr;}
+    .contact-box{grid-template-columns:1fr; padding:28px;}
+    .top nav{display:none;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    #network *{animation:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">Hamza<span>SEO</span></div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <svg id="network" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#2f5f5b" stroke-width="1">
+      <line x1="80" y1="90" x2="220" y2="150" />
+      <line x1="220" y1="150" x2="180" y2="280" />
+      <line x1="220" y1="150" x2="370" y2="120" />
+      <line x1="180" y1="280" x2="330" y2="330" />
+      <line x1="370" y1="120" x2="330" y2="330" />
+      <line x1="180" y1="280" x2="90" y2="380" />
+      <line x1="330" y1="330" x2="420" y2="400" />
+      <line x1="370" y1="120" x2="440" y2="230" />
+      <line x1="440" y1="230" x2="330" y2="330" />
+    </g>
+    <g fill="#59d3c4">
+      <circle cx="220" cy="150" r="9">
+        <animate attributeName="r" values="9;12;9" dur="3.2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="180" cy="280" r="6"/>
+      <circle cx="370" cy="120" r="6"/>
+      <circle cx="330" cy="330" r="10">
+        <animate attributeName="r" values="10;13;10" dur="4s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="80" cy="90" r="4" fill="#8fa1b3"/>
+      <circle cx="90" cy="380" r="4" fill="#8fa1b3"/>
+      <circle cx="420" cy="400" r="4" fill="#8fa1b3"/>
+      <circle cx="440" cy="230" r="4" fill="#8fa1b3"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div>
+      <div class="kicker">Link building for SEO teams &amp; site owners</div>
+      <h1 class="headline">Backlinks that a search engine actually trusts.</h1>
+      <p class="lede">I place homepage, inner-page, and guest-post links across 15+ countries and TLDs, matched to your niche — with a domain list and pricing before you commit to anything.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://t.me/HamzaSEO6" target="_blank" rel="noopener">Message on Telegram</a>
+        <a class="btn btn-ghost" href="#contact">See how it works</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What you can order</h2>
+      <span class="num">01</span>
+    </div>
+    <ul class="service-list">
+      <li>
+        <h3>Homepage backlinks</h3>
+        <p>A link placed directly on a site's homepage — the strongest placement for passing authority.</p>
+      </li>
+      <li>
+        <h3>Inner page / SEO page backlinks</h3>
+        <p>Links placed on relevant interior pages, useful for targeting specific keywords or pages on your site.</p>
+      </li>
+      <li>
+        <h3>Guest post backlinks</h3>
+        <p>A full article written and published on a host site, with your link placed naturally in the content.</p>
+      </li>
+      <li>
+        <h3>Sidebar links</h3>
+        <p>Persistent placements shown across a site's pages, good for steady long-term visibility.</p>
+      </li>
+      <li>
+        <h3>Niche-relevant links</h3>
+        <p>Placements sourced from sites in your industry, so the link context matches your site's topic.</p>
+      </li>
+      <li>
+        <h3>Country-specific backlinks</h3>
+        <p>Links from domains registered or hosted in a target country, for local and regional SEO campaigns.</p>
+      </li>
+      <li>
+        <h3>Off-page link building</h3>
+        <p>Broader link acquisition beyond a single site — built around your wider off-page SEO strategy.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="coverage">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Domains across 15+ countries</h2>
+      <span class="num">02</span>
+    </div>
+    <p class="coverage-intro">Domain lists are available on request for any of the following markets, plus others not listed here.</p>
+    <div class="flags">
+      <span>🇺🇸 United States</span>
+      <span>🇬🇧 United Kingdom</span>
+      <span>🇨🇦 Canada</span>
+      <span>🇩🇪 Germany</span>
+      <span>🇫🇷 France</span>
+      <span>🇮🇹 Italy</span>
+      <span>🇳🇱 Netherlands</span>
+      <span>🇸🇪 Sweden</span>
+      <span>🇦🇺 Australia</span>
+      <span>🇦🇪 UAE</span>
+      <span>🇹🇷 Turkey</span>
+      <span>🇮🇩 Indonesia</span>
+      <span>🇪🇸 Spain</span>
+      <span>🇵🇱 Poland</span>
+      <span>🇧🇷 Brazil</span>
+      <span>+ more on request</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Why work with me</h2>
+      <span class="num">03</span>
+    </div>
+    <div class="why-grid">
+      <div>Competitive, reasonable market rates — not agency markups.</div>
+      <div>Homepage and inner-page placements, not just one option.</div>
+      <div>Guest posts and sidebar links available side by side.</div>
+      <div>Domain lists shared upfront, before you pay for anything.</div>
+      <div>Bulk orders welcome for agencies and larger campaigns.</div>
+      <div>Fast, direct communication — no ticket queues.</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How it works</h2>
+      <span class="num">04</span>
+    </div>
+    <ol class="steps">
+      <li><p><strong>Send your details.</strong> Share your website, the target page, and your country or niche requirements.</p></li>
+      <li><p><strong>Get options and pricing.</strong> I'll reply with available domains, placement types, and rates that fit.</p></li>
+      <li><p><strong>Confirm and place.</strong> Once you approve, the links go live and I share proof of placement.</p></li>
+    </ol>
+
+    <div style="height:40px;"></div>
+
+    <div class="contact-box">
+      <div>
+        <h2>Ready to send your requirements?</h2>
+        <p>Reach out on Telegram for the fastest reply, or by email if you prefer.</p>
+      </div>
+      <div class="contact-links">
+        <a href="https://t.me/HamzaSEO6" target="_blank" rel="noopener">
+          <span class="icon">✈</span>
+          <span>
+            <span class="label">Telegram</span>
+            @HamzaSEO6
+          </span>
+        </a>
+        <a href="mailto:hamzasultan64f@gmail.com">
+          <span class="icon">✉</span>
+          <span>
+            <span class="label">Email</span>
+            hamzasultan64f@gmail.com
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:10px;">
+    <span>Hamza SEO — Link building services</span>
+    <span>Worldwide coverage</span>
+  </div>
+</footer>
+
+</body>
+  </html>
+  
